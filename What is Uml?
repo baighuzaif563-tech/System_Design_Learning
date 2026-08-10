@@ -1,0 +1,327 @@
+UML(Unified Modelling Diagram)
+
+
+
+       
+    Application  
+1) Ya toh Paragraph Likho
+2) Diagram Banao(Ye accha Trika h Express krne ka)
+
+UML Are of Two types
+
+1)Structural  _>Static Diagram(Describes the Structure of the Application)
+2)Behaviroul -> How Components Interact With Each Other Called as Dyanamic UMl
+
+
+Total 14 UMl are there
+
+But Most Imp 2 Are There 
+
+Structural -> Class Diagram
+
+Behaviroul-> Sequence Diagram 
+
+
+
+How to Make the Class Diagram
+
+Application mein konse Classes and 
+Unka Association Ya connection ko Kaise Dikahte h 
+
+
+
+How to represent a Class
+1) Draw the Rectangle
+2) Divide It in 3 Parts
+
+ 
+1) First part is CLass Name
+
+2) All the Variables and Its DataTypes
+
+    ex 
+
+     brand:String
+     Model:String
+     Engine cc:int
+
+
+3)  CLass ke sare Methods and Behaviour Jo rhenege wo Idhr Likho (Last Rectangle Mein)
+
+       Method:Datatype(Void)
+       Method:Datatype(void)
+
+
+How to Represent Access  Modifier
+        
+   Public     (+) 
+   Private    (-)
+   protected  (#)
+
+
+ if Class Is Abstract Then at the top of the Rectangle Write it as <<abstract>>
+
+Else Not Write Anything
+
+
+
+Associations in CLass Diagram
+
+1) CLass Association  -> Inheritance
+2) Object Association  -> Simple Associtaion,Aggregation,Composition
+
+
+
+
+Inheritance-> class B Extends Class A
+--------> Represent is A relationship By this
+class A{
+Method A
+
+}
+
+class B  Is A Relation is shown By Inheritance
+{
+
+Method B
+
+}
+
+#
+Composition is (Has A) Relationship
+
+1) Simple Association-> Weakest Interaction Between the 
+class 
+
+ex 
+
+
+Arjun     HasA      House    [->]  Represent as This
+
+            (Has a Relation)
+  Arjun class ->  House
+
+2) Aggregation  (More Stronger Relation than previous
+
+  Ex
+
+  Room <--------Diamond----Bed       Chair     Sofa
+
+
+  # room is the Main Object here 
+
+   
+           Main object
+
+            object 1
+
+
+           object 2
+
+
+           object 3
+
+
+Represent as 
+
+------Diamond----MainObject
+       
+Conposition  (Most Strongest among all) Very Imp
+
+
+Ex 
+        (Ye sari clss ka KOi mtlb nhi agar Chair hi nhi h toh)                          
+       Seat      wheels           Chair           Arms
+                                 Main clss
+
+                               Y sare clss
+                               se Milke bnta h
+
+
+Represent  it as 
+------ Filled Diamond-----
+
+It is Represent as Filled Diamond
+
+It also Has    Has a    Relationship
+               ------
+
+Mostly Used in LLD
+
+
+
+
+Ex Diagram
+
+
+
+Car{
+String brand;
+String name;
+Int year;
+void start();
+void stop();
+
+
+}
+
+Manual -> car
+Manual--- Hasa---->Gear
+Manual -----FilledDiamond-->Clutch
+
+Most Imp 
+
+
+
+Automatic->car
+Same as the Manual Car
+
+
+
+
+Ex Restaurant and  Menu
+
+
+Menu cannit Exist without Restaurant 
+
+
+
+
+2) Sequence Diagram
+
+
+Only Imp in some Specific Use Cases
+Objects Ek dusre Se Kaise Interact krenge Wo batata h
+Objects EK dusre S kaise Communicate krenege Or krte h 
+wo batata h Sequence diagram
+A   B    C   D
+Imp terms in Squence 
+
+Lifeline->  Denoted Vertical Dashed Line
+
+
+Activation Bar  -> Object kb tk Active Rehnaga
+
+
+
+Messages Are ALso there 
+
+
+1) Asynchromous messages ->Not Wait for the Response
+
+2) Synchoronours -> wait for the Response
+
+
+Synchrounous Way of Communicaion
+--------->Message 
+<-------- Response Message
+
+
+
+
+Asynchrounous Way of Communicaion
+
+
+A       B
+Message 1    (Not wait for the Response Message)
+-------->
+Message 2
+-------->
+
+Message 3
+-------->
+
+
+Create Message and Destroy Message 
+
+
+Create Message  ->new Object is Create when we 
+<<create>>
+A-------->B(New object B  is Created)
+
+                  B
+                  |
+                  |
+Destroy Message   |                  |
+A                 |
+|                 |
+|<Destroy>        |
+|-----------------|- (yha B ka Object Destroy ho jayenga)
+|
+|
+|
+
+
+
+
+Lost Message and Found Message
+
+   Lost Message 
+       B
+       |
+       |
+       |
+A      
+
+|
+|Message  (Since B Activation Bar Is Already Over SO no  
+|--------   Message Delivered To B
+|
+|
+ 
+
+
+
+Found Message 
+
+In which The  Sender IS Unknown
+
+
+Now One Ex Q
+
+
+
+
+
+How to Draw the Sequence Diagram of the Example
+
+
+Like A User And the Atm Withdrwal 
+               Transaction Object 1)Verify Atm
+user -----> Atm ----->             2)Check Balance
+ account,amount    <-------------   Dispenser
+
+
+
+Create a Use case
+2. Objects are there 
+Atm
+User
+Transaction
+Amount
+dispenser
+
+
+3) now Create a Sequnce Diagram
+
+
+
+Imp terms
+
+alt-> if /else
+option->if
+
+Loop->Iteration showing
+
+
+
+
+ 
+
+
+
+
+
+
+
+    
