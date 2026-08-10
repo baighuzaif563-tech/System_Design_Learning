@@ -1,1 +1,221 @@
 
+Oops  -(Java)
+
+System Design
+
+Procedural -> c Language Set of Instruction 
+Oops->Object Oriented Programming
+
+1) helps in Real World Modelling
+2) Scalable,Reusable
+3) Data Security
+
+  
+
+in Real world objects Interact with Each Other 
+Object ->Characteristics,Methods(Behaviour)
+
+
+Ex
+
+Car 
+Characterics
+Brand
+name,
+Year
+Model
+
+Behaviours
+Start()
+Stop()
+break()
+Accelarate
+
+We Represent This We Create a Class 
+
+// Now Object Oriented
+
+
+class Car{
+String brand;
+String Model;
+void stop();
+void accelerate();
+
+}
+
+class Owner {
+
+Car c;
+String name;
+void drive(){
+c.stop();
+c.accelerate();
+
+}
+
+Bunch of Objects Jo ek Dusre Se Interact Krte h 
+
+
+
+Pillars of Oops (For Mapping the Actions)
+
+
+
+1)Abstraction  - Showing only the Neccesary Details
+2)Encapsulation - 
+3)Inheritance
+4)polyMorphism
+
+
+Abstraction-> Hides Unnecessary Details From a Client and Showing only the Neccesary Details
+
+Encapsulation-> Wrapping Characters and Behaviour in One single Unit Like in a clss like a Capsule
+
+
+Main Functions 
+
+Kuch aise methods ek object ke pass ho skte jisee ki security disturb ho skti h 
+
+
+Abstarction me Hide krte h Lekin Usse Dekh Bhi Liye toh koi Issue Nhi Jaisa Gadi ka Engine Kaise CHlta Usse Mtlb nhi Lekin Check Bhi krliya toh Koi Issue nhi
+
+ex
+
+class.....{
+private .....d1
+
+private ......d2
+
+
+
+
+
+}
+
+
+Access Modifier 
+
+Public  --- Anywhere Accessible(bahr se Access kr Skte h )
+Private ---- Accessible Within the Class Only
+protected- Accessible in Subclass Mostly Used in Inheritance
+
+To access the Private Members Outside the Class We uses Getter and Setter This are Public Method
+
+Abstarction-> Focuses on Data Hiding
+Encapsulation-Focuses on Data Security
+
+Inheritance ->   Parent Ke pass Kuch Same Attributes Mthods Honge Jo Sare Child ke liye common Ho
+    
+ex of Inheritance protected Keyword Is Used (Accessible within the Subclass
+Using Extends Keyword
+class Car{
+
+}
+
+class child1 extends parent1{
+   // It can has the parent class Methods also But can Create Its Own functions also
+
+}
+
+
+class child 2 extends parent2{
+   // It can has the parent class Methods also But can Create Its Own functions also
+}
+Mostly Public Hi rehta h Parent  CLass 
+Ex
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+class Car{
+    String brand;
+    String color;
+     int Year;
+     
+     
+     void Start(){
+         System.out.println("Start the Car");
+     }
+     
+     void stop(){
+          System.out.println("Apply the Break");
+     }
+     
+     void Accelerate(int speed){
+        System.out.println("The Actual Speed of the Car is "+speed);
+    System.out.println("The Actual Speed of the Car After Accelerating is  "+(20+speed));
+        
+     }   
+        void details(){
+            
+            System.out.println("The Brand  of the Car is"+ "  "+brand);
+
+System.out.println("The color of the Car is"+" "+color);
+
+System.out.println("The Year  of the Manufacturing of  Car is"+" "+Year);
+        } 
+     
+     
+}
+
+class Manual extends Car{
+    void apply(int gear){
+        System.out.println("The Current Gear is"+gear);
+    }
+    
+    void changegear(int gear){
+        System.out.println("The Current Gear is  from "+gear+"To"+" "+"2");
+    }
+    
+}
+
+class Main {
+    public static void main(String[] args) {
+        Manual m=new Manual();
+        m.Start();
+        m.brand="BMW";
+        m.color="Black";
+        m.Year=2016;
+        m.details();
+        m.apply(5);
+        m.changegear(4);
+        m.Accelerate(60);
+        m.stop();
+    }
+}
+
+output
+
+
+Start the Car
+The Brand  of the Car is  BMW
+The color of the Car is Black
+The Year  of the Manufacturing of  Car is 2016
+The Current Gear is5
+The Current Gear is  from 4To 2
+The Actual Speed of the Car is 60
+The Actual Speed of the Car After Accelerating is  80
+Apply the Break
+
+=== Code Execution Successful ===
+
+PolyMorphism 
+One Methods But Each class or Entities Has Its Own Or Diff Implementation 
+
+Two types of PolyMorphism 
+
+1) Dynamic
+2) Static
+
+
+Dynamic-> Method Overridinh
+Static->Method Overriding
+
+
+
+
+
+
+
+
+
